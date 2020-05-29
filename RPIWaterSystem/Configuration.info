@@ -1,5 +1,5 @@
 {
-	"MinutesBetweenRuns" : "30",
-	"SecondsToOpen" : "120"
+	"MinutesBetweenRuns" : "1",
+	"SecondsToOpen" : "2",
 	"IsActive" : "true"
 }
