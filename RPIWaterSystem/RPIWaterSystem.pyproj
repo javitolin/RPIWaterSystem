@@ -21,7 +21,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ConfigurationHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Consts.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IOHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RPIWaterSystem.py" />
+    <Compile Include="TwitterNotifier.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configuration.info" />
