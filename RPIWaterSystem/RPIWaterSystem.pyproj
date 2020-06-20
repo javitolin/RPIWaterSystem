@@ -30,6 +30,9 @@
     <Compile Include="Consts.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GPIOHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="IOHelper.py">
       <SubType>Code</SubType>
     </Compile>

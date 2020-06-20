@@ -1,5 +1,10 @@
 import tweepy
 import os
+import IOHelper
+
+if not IOHelper.IsInRaspberry():
+    from win10toast import ToastNotifier
+    toaster = ToastNotifier()
 
 consumer_key = os.getenv("CONSUMER_KEY")
 consumer_secret = os.getenv("CONSUMER_SECRET")
@@ -14,4 +19,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 def SendTweet(message):
-    api.send_direct_message(my_twitter_id, message)
+    if IOHelper.IsInRaspberry():
+        api.send_direct_message(my_twitter_id, message)
+    else:
+        toaster.show_toast("RPIWaterSystem - Twitter", message)

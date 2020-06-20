@@ -2,8 +2,8 @@
 
 from datetime import datetime
 from time import sleep
+from GPIOHelper import *
 import logging
-
 import TwitterNotifier
 from ConfigurationHelper import GetConfiguration
 
@@ -38,7 +38,7 @@ if __name__ == '__main__':
                 continue
             
             conf_date = datetime.strptime(conf.StartTime,'%H:%M:%S')
-            if conf_date.hour == current_hour and 0 <= conf_date.minute - current_minute <= 5:
+            if conf_date.hour == current_hour and 0 <= conf_date.minute - current_minute <= 2:
                 # found a match
                 matched_configuration = conf
                 break
@@ -52,8 +52,10 @@ if __name__ == '__main__':
         TwitterNotifier.SendTweet("Open the Valve!")
         
         # OPEN THE VALVE
+        OpenValve()
         sleep(int(matched_configuration.DurationInSeconds))
         # CLOSE THE VALVE
+        CloseValve()
 
         TwitterNotifier.SendTweet("Valve has been closed!")
         logging.info("Valve has been closed!")
