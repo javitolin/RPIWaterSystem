@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Configuration.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ConfigurationHelper.py">
       <SubType>Code</SubType>
     </Compile>

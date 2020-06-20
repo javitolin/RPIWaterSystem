@@ -1,5 +1,16 @@
 {
-	"MinutesBetweenRuns" : "1",
-	"SecondsToOpen" : "2",
-	"IsActive" : "true"
+	"IsActive": "true",
+	"MinimumMinutesBetweenRuns": 5,
+	"RunConfiguration": [
+		{
+			"StartTime": "15:59:00",
+			"DurationInSeconds": "180",
+			"IsActive": "true"
+		},
+		{
+			"StartTime": "20:00:00",
+			"DurationInSeconds": "180",
+			"IsActive": "true"
+		}
+	]
 }
