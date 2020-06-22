@@ -1,5 +1,5 @@
 from Consts import LocalConfigurationFile, RemoteConfigurationFile
-from IOHelper import *
+import IOHelper
 from Configuration import *
 import urllib.request
 import json
@@ -11,7 +11,7 @@ def GetConfiguration():
             mybytes = f.read()
             configurationFileContent = mybytes.decode("utf8")
         else:
-            configurationFileContent = ReadFromFile(LocalConfigurationFile)
+            configurationFileContent = IOHelper.ReadFromFile(LocalConfigurationFile)
         configuration = Configuration.from_json(json.loads(configurationFileContent))
         return configuration
     except:
