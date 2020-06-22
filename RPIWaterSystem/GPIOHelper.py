@@ -13,7 +13,7 @@ else:
     # Running on RaspberryPi
     from gpiozero import LED
 
-    VALVE_GPIO = 17 # TODO
+    VALVE_GPIO = 26
     valve = LED(VALVE_GPIO)
 
     def OpenValve():
