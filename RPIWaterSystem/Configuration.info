@@ -3,7 +3,7 @@
 	"MinimumMinutesBetweenRuns": 5,
 	"RunConfiguration": [
 		{
-			"StartTime": "20:30:00",
+			"StartTime": "20:53:00",
 			"DurationInSeconds": "180",
 			"IsActive": "true"
 		},
